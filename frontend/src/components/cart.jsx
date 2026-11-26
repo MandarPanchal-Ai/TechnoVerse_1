@@ -7,7 +7,7 @@ function Cart({ cart, setCart, isOpen, setIsOpen }) {
 
   const fetchCart = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/cart");
+      const response = await fetch("https://techno-verse-1-c580ps9h9-mandarpof2501-4109.vercel.app/cart");
 
       if (!response.ok) {
         throw new Error("Could not fetch cart");
