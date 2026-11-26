@@ -53,7 +53,7 @@ function Cart({ cart, setCart, isOpen, setIsOpen }) {
     try {
       if (newQuantity === 0) {
         const response = await fetch(
-          `http://127.0.0.1:8000/cart/${id}`,
+          `https://techno-verse-1-c580ps9h9-mandarpof2501-4109.vercel.app/cart/${id}`,
           { method: "DELETE" }
         );
 
@@ -62,7 +62,7 @@ function Cart({ cart, setCart, isOpen, setIsOpen }) {
         }
       } else {
         const response = await fetch(
-          `http://127.0.0.1:8000/cart/${id}?quantity=${newQuantity}`,
+          `https://techno-verse-1-c580ps9h9-mandarpof2501-4109.vercel.app/cart/${id}?quantity=${newQuantity}`,
           { method: "PUT" }
         );
 
@@ -83,7 +83,7 @@ function Cart({ cart, setCart, isOpen, setIsOpen }) {
   const removeItem = async (id) => {
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/cart/${id}`,
+        `https://techno-verse-1-c580ps9h9-mandarpof2501-4109.vercel.app/cart/${id}`,
         {
           method: "DELETE"
         }

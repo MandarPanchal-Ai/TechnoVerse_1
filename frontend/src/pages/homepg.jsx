@@ -50,7 +50,7 @@ export default function Homepg({ cart, setCart }) {
 
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/products")
+    fetch("https://techno-verse-1-c580ps9h9-mandarpof2501-4109.vercel.app/products")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Could not fetch products");
@@ -89,7 +89,7 @@ export default function Homepg({ cart, setCart }) {
 
   const addToCart = async (product) => {
     try {
-      const response = await fetch("http://127.0.0.1:8000/cart", {
+      const response = await fetch("https://techno-verse-1-c580ps9h9-mandarpof2501-4109.vercel.app/cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -108,7 +108,7 @@ export default function Homepg({ cart, setCart }) {
       }
 
 
-      const cartResponse = await fetch("http://127.0.0.1:8000/cart");
+      const cartResponse = await fetch("https://techno-verse-1-c580ps9h9-mandarpof2501-4109.vercel.app/cart");
 
       if (!cartResponse.ok) {
         throw new Error("Could not fetch updated cart");
